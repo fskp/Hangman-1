@@ -26,7 +26,7 @@ class ScoreBoard
         else 
         {
             Console.WriteLine("Scoreboard:");
-            int i=0;
+            int i = 0;
             while (scoreNames[i] != null) 
             {
                 Console.WriteLine("{0}. {1} ---> {2} mistacke(s)!", i + 1, scoreNames[i], mistackes[i]);
@@ -79,7 +79,10 @@ class ScoreBoard
     public int GetWorstTopScore() 
     {
         int worstTopScore = int.MaxValue;
-        if (scoreNames[scoreNames.Length - 1] != null) { worstTopScore = mistackes[scoreNames.Length - 1]; }
+        if (scoreNames[scoreNames.Length - 1] != null)
+        {
+            worstTopScore = mistackes[scoreNames.Length - 1];
+        }
         return worstTopScore;
     }
 

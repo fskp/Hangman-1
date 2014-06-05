@@ -2,27 +2,22 @@
 
 class besenica
 {
-	// besenicata e egati tupata igra! ujasssssssssssss, spasete me ot besiloto!
-	// Free style comment 
-	
+    // besenicata e egati tupata igra! ujasssssssssssss, spasete me ot besiloto!
+    // Free style comment 
     private string wordToGuess;
     private char[] guessedLetters;
     private int mistackes;
     private bool helpUsed;
+
     public besenica() 
     {
         ReSet();
     }
 
-
-
     public void ReSet()
     {
         this.wordToGuess = IzberiRandomWord();
         guessedLetters = new char[wordToGuess.Length];
-
-
-
 
         for (int i = 0; i < wordToGuess.Length; i++)
         {
@@ -34,12 +29,20 @@ class besenica
 
     public int Mistackes
     {
-        get{return mistackes;}
+        get
+        {
+            return mistackes;
+        }
     }
+
     public bool HelpUsed 
     {
-        get { return helpUsed; }
+        get
+        {
+            return helpUsed;
+        }
     }
+
     public char RevealALetter() 
     {
         char toReturnt = char.MinValue;
@@ -56,7 +59,6 @@ class besenica
         return toReturnt;
     }
 
-
     public int NumberOccuranceOfLetter(char letter) 
     {
         int count = 0;
@@ -68,7 +70,10 @@ class besenica
                 count++;
             }
         }
-        if (count == 0) { mistackes++; }
+        if (count == 0)
+        {
+            mistackes++;
+        }
         return count;
     }
 
@@ -88,30 +93,24 @@ class besenica
         {
             if (guessedLetters[i] == '_') 
             {
-     
-				
-				return false;
+                return false;
             }
         }
         return true;
     }
 
-
-    private string[] words = {"computer", "programmer", "software", "debugger","compiler", "developer", "algorithm",
-                                      "array", "method", "variable" };
+    private string[] words =
+    {
+        "computer", "programmer", "software", "debugger", "compiler", "developer", "algorithm",
+        "array", "method", "variable"
+    };
 
     private Random randomGenerator = new Random();
 
     private string IzberiRandomWord()
     {
-
-
-
-
         int choice = randomGenerator.Next(words.Length);
 
         return words[choice];
     }
-
-
 }

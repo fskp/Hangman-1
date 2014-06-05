@@ -17,7 +17,7 @@ class Hangman
                 if (game.HelpUsed)
                 {
                     Console.WriteLine("You won with {0} mistake(s) but you have cheated." +
-                        " You are not allowed to enter into the scoreboard.", game.Mistackes);
+                                      " You are not allowed to enter into the scoreboard.", game.Mistackes);
                 }
                 else
                 {
@@ -58,7 +58,8 @@ class Hangman
                     ExecuteCommand(command, scoreBoard, game);
                 }
             }
-        } while (command != "exit");
+        }
+        while (command != "exit");
     }
 
     static void ExecuteCommand(string command, ScoreBoard scoreBoard, besenica game) 
@@ -87,7 +88,8 @@ class Hangman
                 {
                     Console.WriteLine("Good bye!");
                     return;
-                } break;
+                }
+                break;
             default:
                 {
                     Console.WriteLine("Incorrect guess or command!");

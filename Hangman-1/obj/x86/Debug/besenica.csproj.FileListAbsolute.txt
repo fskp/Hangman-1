@@ -1,0 +1,5 @@
+C:\Users\Strashimir\Documents\GitHub\Hangman-1\Hangman-1\bin\Debug\Hangman.exe
+C:\Users\Strashimir\Documents\GitHub\Hangman-1\Hangman-1\bin\Debug\Hangman.pdb
+C:\Users\Strashimir\Documents\GitHub\Hangman-1\Hangman-1\obj\x86\Debug\besenica.csprojResolveAssemblyReference.cache
+C:\Users\Strashimir\Documents\GitHub\Hangman-1\Hangman-1\obj\x86\Debug\Hangman.exe
+C:\Users\Strashimir\Documents\GitHub\Hangman-1\Hangman-1\obj\x86\Debug\Hangman.pdb
