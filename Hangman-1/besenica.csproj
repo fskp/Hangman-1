@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="besenica.cs" />
     <Compile Include="Hangman.cs" />
+    <Compile Include="HangmanMain.cs" />
     <Compile Include="ScoreBoard.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
