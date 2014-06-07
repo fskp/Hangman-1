@@ -1,0 +1,5 @@
+C:\Users\Filip\Desktop\Telerik\Quality Code\TeamWorkProject\Hangman-1\bin\Debug\Hangman.exe
+C:\Users\Filip\Desktop\Telerik\Quality Code\TeamWorkProject\Hangman-1\bin\Debug\Hangman.pdb
+C:\Users\Filip\Desktop\Telerik\Quality Code\TeamWorkProject\Hangman-1\obj\x86\Debug\besenica.csprojResolveAssemblyReference.cache
+C:\Users\Filip\Desktop\Telerik\Quality Code\TeamWorkProject\Hangman-1\obj\x86\Debug\Hangman.exe
+C:\Users\Filip\Desktop\Telerik\Quality Code\TeamWorkProject\Hangman-1\obj\x86\Debug\Hangman.pdb
