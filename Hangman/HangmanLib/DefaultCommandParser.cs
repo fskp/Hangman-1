@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HangmanLib
 {
-	public class DefaultCommandParser : IParser
+	public class DefaultParser : IParser
 	{
 	}
 }

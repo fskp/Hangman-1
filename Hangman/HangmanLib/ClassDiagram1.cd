@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="HangmanLib.DefaultCommandParser" Collapsed="true" BaseTypeListCollapsed="true">
+  <Class Name="HangmanLib.DefaultParser" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
