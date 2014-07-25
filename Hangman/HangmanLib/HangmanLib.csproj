@@ -39,24 +39,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleMessageRenderer.cs" />
     <Compile Include="ConsoleReader.cs" />
     <Compile Include="ConsoleRenderer.cs" />
-    <Compile Include="DefaultCommandParser.cs" />
+    <Compile Include="DefaultParser.cs" />
     <Compile Include="DefaultGameEngineFactory.cs" />
     <Compile Include="DefaultMessageProvider.cs" />
     <Compile Include="DefaultScoreboard.cs" />
     <Compile Include="GameEngine.cs" />
     <Compile Include="GameEngineFactory.cs" />
+    <Compile Include="GameState.cs" />
     <Compile Include="IGameEngine.cs" />
+    <Compile Include="IGameState.cs" />
     <Compile Include="IMessageProvider.cs" />
-    <Compile Include="InterfaceMessages.cs" />
-    <Compile Include="InterfaceMessagesContainer.cs" />
     <Compile Include="IParser.cs" />
     <Compile Include="IReader.cs" />
     <Compile Include="IRenderer.cs" />
     <Compile Include="IScoreboard.cs" />
     <Compile Include="IWordContainer.cs" />
+    <Compile Include="MessageTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomGenerator.cs" />
     <Compile Include="Renderer.cs" />
