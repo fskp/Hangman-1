@@ -6,7 +6,7 @@ using System.Text;
 namespace HangmanLib
 {
 	public interface IRenderer
-	{
-
+    {
+        // TODO: declare the interface methods
 	}
 }

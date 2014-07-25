@@ -7,5 +7,6 @@ namespace HangmanLib
 {
 	public interface IScoreboard
 	{
+        // TODO: declare the interface methods
 	}
 }

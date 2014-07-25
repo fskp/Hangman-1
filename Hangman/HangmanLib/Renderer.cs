@@ -13,5 +13,9 @@ namespace HangmanLib
 		{
 			this.messageRenderer = messageProvider;
 		}
+
+        public virtual void RenderMessage(MessageTypes messageType, params object[] parameters);
+
+        // TODO: add additional functionality
 	}
 }

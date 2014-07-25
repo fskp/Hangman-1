@@ -7,5 +7,6 @@ namespace HangmanLib
 {
 	public class ConsoleReader : IReader
 	{
+        // TODO: implement
 	}
 }

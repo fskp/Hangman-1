@@ -7,7 +7,6 @@ namespace HangmanLib
 {
 	public interface IMessageProvider
 	{
-		string GetGreetinsMessage();
-		string GetLostMessage(string score);
+        string GetMessage(MessageTypes messageType, params object[] parameters);
 	}
 }

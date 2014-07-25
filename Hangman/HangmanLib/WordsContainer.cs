@@ -7,7 +7,7 @@ namespace HangmanLib
 {
 	public class WordsContainer : IWordsContainer
 	{
-		private List<string> words;
+		private IEnumerable<string> words;
 
 		public WordsContainer()
 		{

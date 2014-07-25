@@ -7,5 +7,6 @@ namespace HangmanLib
 {
 	public class ConsoleRenderer : Renderer
 	{
+        // TODO: implement
 	}
 }
