@@ -5,43 +5,24 @@ using System.Collections.Generic;
 
 class HangmanMain
 {
+    public const int Width = 80;
+    public const int Height = 25;
+
     static void Main()
     {
-        // These are testing lines. This part is in the engine 
-        Console.BufferWidth = Console.WindowWidth = 80;
-        Console.BufferHeight = Console.WindowHeight = 25;
-        var reader = new ConsoleReader();
+        Console.BufferWidth = Console.WindowWidth = HangmanMain.Width;
+        Console.BufferHeight = Console.WindowHeight = HangmanMain.Height;
+        
+        IReader reader = new ConsoleReader();
+        Renderer renderer = new ConsoleRenderer(HangmanMain.Height, HangmanMain.Width);
 
-        var height = Console.WindowHeight;
-        var width = Console.WindowWidth;
-        Renderer renderer = new ConsoleRenderer(height, width);
+        GameEngine engine = new GameEngine(reader, renderer);
 
-        var scoreMessageCoordX = 15;
-        var scoreMessageCoordY = 3;
-        var scoreMessageScore = 14;
-        var scoreMessage = new ScoreMessage(scoreMessageCoordX, scoreMessageCoordY, scoreMessageScore);
-
-        var enteredChars = new HashSet<char>() { 'a', 'z', 'c', 'o' }; 
-
-        var enteredCharsMessage = new EnteredChars(5, 3, enteredChars);
-
-        renderer.AddVisualObject(scoreMessage);
-        renderer.AddVisualObject(enteredCharsMessage);
-
-        while (true)
-        {
-            Console.Clear();
-            renderer.RenderAll();
-            
-            var input = reader.ReadInput();
-            enteredChars.Add(input);
-            
-            renderer.RemoveVisualObject(enteredCharsMessage);
-            enteredCharsMessage = new EnteredChars(5, 3, enteredChars);
-            renderer.AddVisualObject(enteredCharsMessage);
-        }
+        engine.Run();
 
         return;
+
+
         ScoreBoard scoreBoard = new ScoreBoard();
         Hangman game = new Hangman();
         Console.WriteLine("Welcome to “Hangman” game. Please try to guess my secret word.");

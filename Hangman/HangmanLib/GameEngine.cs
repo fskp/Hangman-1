@@ -16,19 +16,59 @@ namespace HangmanLib
 		private IScoreboard scoreboard;
 		private WordsContainer words;
 
+        private ICollection<char> enteredLetters;
+
 		public void Run()
 		{
-            // TODO: add the main game logic here
-			throw new NotImplementedException();
+            int score = 13;
+            var scoreMessage = new ScoreMessage(3, 3, score);
+
+            var enteredCharsMessage = new EnteredChars(5, 3, this.enteredLetters);
+
+            renderer.AddVisualObject(scoreMessage);
+            renderer.AddVisualObject(enteredCharsMessage);
+
+            while(true)
+            {
+                this.renderer.Clear();
+                this.renderer.AddVisualObject(scoreMessage);
+                this.renderer.AddVisualObject(enteredCharsMessage);
+                this.renderer.RenderAll();
+                this.renderer.RemoveVisualObject(scoreMessage);
+                this.renderer.RemoveVisualObject(enteredCharsMessage);
+
+                Console.SetCursorPosition(3, 23);
+                Console.Write("Enter input: ");
+                var input = this.reader.ReadInput();
+                if(!this.enteredLetters.Contains(input))
+                {
+                    score++;
+                    this.enteredLetters.Add(input);
+                }
+
+                
+                
+                enteredCharsMessage = new EnteredChars(5, 3, this.enteredLetters);
+
+                
+                scoreMessage = new ScoreMessage(3, 3, score);
+            }
 		}
 
+        public GameEngine(IReader reader, Renderer renderer)
+        {
+            this.reader = reader;
+            this.renderer = renderer;
+            this.enteredLetters = new HashSet<char>();
+        }
+
 		public GameEngine(IReader reader, Renderer renderer, IParser parser, IScoreboard scoreboard)
+            : this(reader, renderer)
 		{
-			this.reader = reader;
-			this.renderer = renderer;
 			this.parser = parser;
 			this.scoreboard = scoreboard;
 			this.words = new WordsContainer();
+
 		}
 
 		public void AddWord(string word)
