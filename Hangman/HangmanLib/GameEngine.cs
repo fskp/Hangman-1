@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HangmanLib.Rendering;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace HangmanLib
 	public class GameEngine : IGameEngine, IWordsContainer
 	{
 		private IReader reader;
-		private IRenderer renderer;
+		private Renderer renderer;
 		private IParser parser;
 		private IScoreboard scoreboard;
 		private WordsContainer words;
@@ -21,7 +22,7 @@ namespace HangmanLib
 			throw new NotImplementedException();
 		}
 
-		public GameEngine(IReader reader, IRenderer renderer, IParser parser, IScoreboard scoreboard)
+		public GameEngine(IReader reader, Renderer renderer, IParser parser, IScoreboard scoreboard)
 		{
 			this.reader = reader;
 			this.renderer = renderer;
@@ -34,5 +35,16 @@ namespace HangmanLib
 		{
 			this.words.AddWord(word);
 		}
-	}
+
+
+        public string GetWord(int index)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Count()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

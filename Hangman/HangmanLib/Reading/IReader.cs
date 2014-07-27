@@ -5,8 +5,8 @@ using System.Text;
 
 namespace HangmanLib
 {
-	public class ConsoleReader : IReader
-	{
-        // TODO: implement
+	public interface IReader
+    {
+        char ReadInput();
 	}
 }

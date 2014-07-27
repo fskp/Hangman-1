@@ -11,18 +11,19 @@ namespace HangmanLib
 
         public DefaultMessageProvider()
         {
-            messageFormatersList.Add(MessageTypes.GreetingsMessage, "Welcome to “Hangman” game. Please try to guess my secret word.");
+            this.messageFormatersList = new Dictionary<MessageTypes, string>();
+            this.messageFormatersList.Add(MessageTypes.GreetingsMessage, "Welcome to “Hangman” game. Please try to guess my secret word.");
             // TODO: add all the messages in a similar manner
         }
 
         public string GetMessage(MessageTypes messageType, params object[] parameters)
         {
-            if (!messageFormatersList.ContainsKey(messageType))
+            if (!this.messageFormatersList.ContainsKey(messageType))
             {
-                return "";
+                return string.Empty;
             }
 
-            return String.Format(messageFormatersList[messageType], parameters);
+            return String.Format(this.messageFormatersList[messageType], parameters);
         }
     }
 }
